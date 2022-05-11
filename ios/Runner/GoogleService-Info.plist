@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>880727124209-82d94c3uv3ffatab22dq9m9o2kelg0ps.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.880727124209-82d94c3uv3ffatab22dq9m9o2kelg0ps</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>880727124209-i96v6nok6r7fduc1acq9k1q96ta5064m.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBJta1auP8qm2m4TRL5wFdv0OeMDINtB0k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>880727124209</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.flutterflow.agroaid</string>
+	<key>PROJECT_ID</key>
+	<string>agroaid-aca65</string>
+	<key>STORAGE_BUCKET</key>
+	<string>agroaid-aca65.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:880727124209:ios:489bb99d018ac1e83ea150</string>
+</dict>
+</plist>

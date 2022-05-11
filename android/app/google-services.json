@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "880727124209",
+    "project_id": "agroaid-aca65",
+    "storage_bucket": "agroaid-aca65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880727124209:android:aed37a76a690c97e3ea150",
+        "android_client_info": {
+          "package_name": "com.flutterflow.agroaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880727124209-i96v6nok6r7fduc1acq9k1q96ta5064m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.agroaid",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "880727124209-3rgn0eo0itkio9pl5slke21fugbehrmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr8VnmEhD4f0wHiow7kT_aJR0Dl33CA_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880727124209-3rgn0eo0itkio9pl5slke21fugbehrmh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "880727124209-82d94c3uv3ffatab22dq9m9o2kelg0ps.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.agroaid"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

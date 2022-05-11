@@ -11,10 +11,40 @@ abstract class AgroaidRecord
   static Serializer<AgroaidRecord> get serializer => _$agroaidRecordSerializer;
 
   @nullable
+  @BuiltValueField(wireName: 'Name')
+  BuiltList<String> get name;
+
+  @nullable
+  @BuiltValueField(wireName: 'District')
+  String get district;
+
+  @nullable
+  @BuiltValueField(wireName: 'Address')
+  BuiltList<String> get address;
+
+  @nullable
+  @BuiltValueField(wireName: 'Pincode')
+  BuiltList<int> get pincode;
+
+  @nullable
+  @BuiltValueField(wireName: 'AadharNumber')
+  BuiltList<int> get aadharNumber;
+
+  @nullable
+  @BuiltValueField(wireName: 'State')
+  String get state;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
-  static void _initializeBuilder(AgroaidRecordBuilder builder) => builder;
+  static void _initializeBuilder(AgroaidRecordBuilder builder) => builder
+    ..name = ListBuilder()
+    ..district = ''
+    ..address = ListBuilder()
+    ..pincode = ListBuilder()
+    ..aadharNumber = ListBuilder()
+    ..state = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('agroaid');
@@ -37,5 +67,16 @@ abstract class AgroaidRecord
           {...mapFromFirestore(data), kDocumentReferenceField: reference});
 }
 
-Map<String, dynamic> createAgroaidRecordData() =>
-    serializers.toFirestore(AgroaidRecord.serializer, AgroaidRecord((a) => a));
+Map<String, dynamic> createAgroaidRecordData({
+  String district,
+  String state,
+}) =>
+    serializers.toFirestore(
+        AgroaidRecord.serializer,
+        AgroaidRecord((a) => a
+          ..name = null
+          ..district = district
+          ..address = null
+          ..pincode = null
+          ..aadharNumber = null
+          ..state = state));
