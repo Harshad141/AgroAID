@@ -163,9 +163,9 @@ class _ChatMainWidgetState extends State<ChatMainWidget> {
                                         .contains(currentUserReference),
                                     title: chatInfo.chatPreviewTitle(),
                                     userProfilePic: chatInfo.chatPreviewPic(),
-                                    color: FlutterFlowTheme.of(context).dark900,
-                                    unreadColor:
-                                        FlutterFlowTheme.of(context).tertiary,
+                                    color: Colors.black,
+                                    unreadColor: FlutterFlowTheme.of(context)
+                                        .tertiaryColor,
                                     titleTextStyle: GoogleFonts.getFont(
                                       'Lexend Deca',
                                       color: FlutterFlowTheme.of(context)
@@ -175,15 +175,13 @@ class _ChatMainWidgetState extends State<ChatMainWidget> {
                                     ),
                                     dateTextStyle: GoogleFonts.getFont(
                                       'Lexend Deca',
-                                      color:
-                                          FlutterFlowTheme.of(context).grayIcon,
+                                      color: Color(0xFFE2E2E2),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 14,
                                     ),
                                     previewTextStyle: GoogleFonts.getFont(
                                       'Lexend Deca',
-                                      color:
-                                          FlutterFlowTheme.of(context).grayIcon,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.normal,
                                       fontSize: 14,
                                     ),

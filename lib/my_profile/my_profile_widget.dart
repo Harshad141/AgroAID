@@ -41,7 +41,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget> {
         final myProfileUserRecord = snapshot.data;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: FlutterFlowTheme.of(context).background,
+          backgroundColor: Colors.black,
           body: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -173,8 +173,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Poppins',
-                                      color:
-                                          FlutterFlowTheme.of(context).grayIcon,
+                                      color: Colors.black,
                                     ),
                               ),
                             ),
@@ -234,10 +233,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: 60,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).background,
+                              color: Colors.black,
                               boxShadow: [
                                 BoxShadow(
-                                  color: FlutterFlowTheme.of(context).dark900,
+                                  color: Colors.white,
                                   offset: Offset(0, 1),
                                 )
                               ],

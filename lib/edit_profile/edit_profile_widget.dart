@@ -72,13 +72,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               FFLocalizations.of(context).getText(
                 'jzkx344o' /* Edit Profile */,
               ),
-              style: FlutterFlowTheme.of(context).title2,
+              style: FlutterFlowTheme.of(context).title2.override(
+                    fontFamily: 'Poppins',
+                    color: Color(0xFF616C75),
+                  ),
             ),
             actions: [],
             centerTitle: false,
             elevation: 0,
           ),
-          backgroundColor: FlutterFlowTheme.of(context).dark900,
+          backgroundColor: Colors.black,
           body: SafeArea(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -138,8 +141,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       .bodyText1
                                       .override(
                                         fontFamily: 'Poppins',
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiaryColor,
+                                        color: Color(0xFFF18D62),
                                       ),
                                   keyboardType: TextInputType.emailAddress,
                                 ),

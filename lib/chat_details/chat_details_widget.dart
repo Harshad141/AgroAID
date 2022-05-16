@@ -100,14 +100,14 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
         centerTitle: true,
         elevation: 3,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).background,
+      backgroundColor: Colors.black,
       endDrawer: Drawer(
         elevation: 16,
         child: Container(
           width: 100,
           height: 100,
           decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).dark900,
+            color: Colors.black,
           ),
           child: StreamBuilder<UserRecord>(
             stream: UserRecord.getDocument(widget.chatUser.reference),
@@ -139,7 +139,7 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
                           buttonSize: 48,
                           icon: Icon(
                             Icons.close_rounded,
-                            color: FlutterFlowTheme.of(context).grayIcon,
+                            color: Colors.black,
                             size: 30,
                           ),
                           onPressed: () async {
@@ -312,10 +312,10 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
               ? FFChatPage(
                   chatInfo: snapshot.data,
                   allowImages: true,
-                  backgroundColor: FlutterFlowTheme.of(context).background,
+                  backgroundColor: Colors.black,
                   timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
                   currentUserBoxDecoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).dark900,
+                    color: Colors.black,
                     border: Border.all(
                       color: Colors.transparent,
                     ),

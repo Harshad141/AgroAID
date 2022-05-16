@@ -111,11 +111,10 @@ class _MyfriendsWidgetState extends State<MyfriendsWidget> {
                                 width: MediaQuery.of(context).size.width * 0.96,
                                 height: 70,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).dark900,
+                                  color: Colors.black,
                                   boxShadow: [
                                     BoxShadow(
-                                      color:
-                                          FlutterFlowTheme.of(context).dark900,
+                                      color: Colors.white,
                                       offset: Offset(0, 1),
                                     )
                                   ],
@@ -204,9 +203,7 @@ class _MyfriendsWidgetState extends State<MyfriendsWidget> {
                                                       .override(
                                                         fontFamily: 'Poppins',
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .tertiaryColor,
+                                                            Color(0xFFF38F64),
                                                       ),
                                                 ),
                                               ],
