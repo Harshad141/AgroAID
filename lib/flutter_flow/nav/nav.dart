@@ -96,24 +96,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => NewRegDetailsWidget(),
         ),
         FFRoute(
-          name: 'side_drawer',
-          path: '/sideDrawer',
-          builder: (context, params) => SideDrawerWidget(),
-        ),
-        FFRoute(
           name: 'CROPINFO',
           path: '/cropinfo',
           builder: (context, params) => CropinfoWidget(),
-        ),
-        FFRoute(
-          name: 'rough',
-          path: '/rough',
-          builder: (context, params) => RoughWidget(),
-        ),
-        FFRoute(
-          name: 'side_drawerCopy',
-          path: '/sideDrawerCopy',
-          builder: (context, params) => SideDrawerCopyWidget(),
         ),
         FFRoute(
           name: 'crop1',
@@ -181,9 +166,78 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => SoiltestingWidget(),
         ),
         FFRoute(
-          name: 'weather',
-          path: '/weather',
-          builder: (context, params) => WeatherWidget(),
+          name: 'News',
+          path: '/news',
+          builder: (context, params) => NewsWidget(),
+        ),
+        FFRoute(
+          name: 'ecomm_home',
+          path: '/ecommHome',
+          builder: (context, params) => EcommHomeWidget(),
+        ),
+        FFRoute(
+          name: 'ecomm_cart',
+          path: '/ecommCart',
+          builder: (context, params) => EcommCartWidget(),
+        ),
+        FFRoute(
+          name: 'search_vendors',
+          path: '/searchVendors',
+          builder: (context, params) => SearchVendorsWidget(),
+        ),
+        FFRoute(
+          name: 'myfriends',
+          path: '/myfriends',
+          builder: (context, params) => MyfriendsWidget(),
+        ),
+        FFRoute(
+          name: 'chatMain',
+          path: '/chatMain',
+          builder: (context, params) => ChatMainWidget(),
+        ),
+        FFRoute(
+          name: 'chatDetails',
+          path: '/chatDetails',
+          asyncParams: {
+            'chatUser': getDoc('user', UserRecord.serializer),
+          },
+          builder: (context, params) => ChatDetailsWidget(
+            chatRef: params.getParam(
+                'chatRef', ParamType.DocumentReference, 'chats'),
+            chatUser: params.getParam('chatUser', ParamType.Document),
+          ),
+        ),
+        FFRoute(
+          name: 'add_crop1',
+          path: '/addCrop1',
+          builder: (context, params) => AddCrop1Widget(),
+        ),
+        FFRoute(
+          name: 'faqs',
+          path: '/faqs',
+          builder: (context, params) => FaqsWidget(),
+        ),
+        FFRoute(
+          name: 'hire_machineries',
+          path: '/hireMachineries',
+          builder: (context, params) => HireMachineriesWidget(),
+        ),
+        FFRoute(
+          name: 'myProfile',
+          path: '/myProfile',
+          builder: (context, params) => MyProfileWidget(),
+        ),
+        FFRoute(
+          name: 'editProfile',
+          path: '/editProfile',
+          builder: (context, params) => EditProfileWidget(
+            userEmail: params.getParam(
+                'userEmail', ParamType.DocumentReference, 'user'),
+            userPhoto: params.getParam(
+                'userPhoto', ParamType.DocumentReference, 'user'),
+            userDisplay: params.getParam(
+                'userDisplay', ParamType.DocumentReference, 'user'),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

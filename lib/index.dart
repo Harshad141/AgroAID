@@ -5,11 +5,7 @@ export 'enter_phonenumber/enter_phonenumber_widget.dart'
 export 'verify_otp/verify_otp_widget.dart' show VerifyOtpWidget;
 export 'landing_page/landing_page_widget.dart' show LandingPageWidget;
 export 'new_reg_details/new_reg_details_widget.dart' show NewRegDetailsWidget;
-export 'side_drawer/side_drawer_widget.dart' show SideDrawerWidget;
 export 'cropinfo/cropinfo_widget.dart' show CropinfoWidget;
-export 'rough/rough_widget.dart' show RoughWidget;
-export 'side_drawer_copy/side_drawer_copy_widget.dart'
-    show SideDrawerCopyWidget;
 export 'crop1/crop1_widget.dart' show Crop1Widget;
 export 'crop2/crop2_widget.dart' show Crop2Widget;
 export 'crop3/crop3_widget.dart' show Crop3Widget;
@@ -23,4 +19,16 @@ export 'crop10/crop10_widget.dart' show Crop10Widget;
 export 'crop11/crop11_widget.dart' show Crop11Widget;
 export 'crop12/crop12_widget.dart' show Crop12Widget;
 export 'soiltesting/soiltesting_widget.dart' show SoiltestingWidget;
-export 'weather/weather_widget.dart' show WeatherWidget;
+export 'news/news_widget.dart' show NewsWidget;
+export 'ecomm_home/ecomm_home_widget.dart' show EcommHomeWidget;
+export 'ecomm_cart/ecomm_cart_widget.dart' show EcommCartWidget;
+export 'search_vendors/search_vendors_widget.dart' show SearchVendorsWidget;
+export 'myfriends/myfriends_widget.dart' show MyfriendsWidget;
+export 'chat_main/chat_main_widget.dart' show ChatMainWidget;
+export 'chat_details/chat_details_widget.dart' show ChatDetailsWidget;
+export 'add_crop1/add_crop1_widget.dart' show AddCrop1Widget;
+export 'faqs/faqs_widget.dart' show FaqsWidget;
+export 'hire_machineries/hire_machineries_widget.dart'
+    show HireMachineriesWidget;
+export 'my_profile/my_profile_widget.dart' show MyProfileWidget;
+export 'edit_profile/edit_profile_widget.dart' show EditProfileWidget;

@@ -30,116 +30,149 @@ class _EnterPhonenumberWidgetState extends State<EnterPhonenumberWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: Color(0xFFCAF946),
+        automaticallyImplyLeading: false,
+        title: Align(
+          alignment: AlignmentDirectional(0, 0.1),
+          child: Text(
+            FFLocalizations.of(context).getText(
+              'rpbpkpdq' /* AgroAID */,
+            ),
+            style: FlutterFlowTheme.of(context).title1.override(
+                  fontFamily: 'PT Serif',
+                  color: Colors.black,
+                ),
+          ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 2,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
-          child: Stack(
-            children: [
-              Image.network(
-                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/agro-aid-d6wj8v/assets/y1k8v63ritx2/login_otp.PNG',
-                width: 375,
-                height: 812,
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 1,
+            decoration: BoxDecoration(
+              color: Color(0xFFEEEEEE),
+              image: DecorationImage(
                 fit: BoxFit.cover,
+                image: Image.asset(
+                  'assets/images/WhatsApp_Image_2022-04-27_at_10.31.06_PM.jpeg',
+                ).image,
               ),
-              Align(
-                alignment: AlignmentDirectional(0, -0.43),
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'yssrvxry' /* Enter your Phone number */,
-                          ),
-                          style: FlutterFlowTheme.of(context).title3,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 50),
-                        child: TextFormField(
-                          controller: textController,
-                          onChanged: (_) => EasyDebounce.debounce(
-                            'textController',
-                            Duration(milliseconds: 2000),
-                            () => setState(() {}),
-                          ),
-                          autofocus: true,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            hintText: FFLocalizations.of(context).getText(
-                              'uyqassmk' /* Enter Phone Number */,
-                            ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
+            ),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 1,
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0, -0.43),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'yssrvxry' /* Enter your Phone number */,
                               ),
-                              borderRadius: BorderRadius.circular(20),
+                              style: FlutterFlowTheme.of(context).title3,
                             ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            filled: true,
-                            fillColor: Color(0xFFC9B4B4),
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.phone,
-                        ),
-                      ),
-                      FFButtonWidget(
-                        onPressed: () async {
-                          final phoneNumberVal = textController.text;
-                          if (phoneNumberVal.isEmpty ||
-                              !phoneNumberVal.startsWith('+')) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(
-                                    'Phone Number is required and has to start with +.'),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(20, 0, 20, 50),
+                            child: TextFormField(
+                              controller: textController,
+                              onChanged: (_) => EasyDebounce.debounce(
+                                'textController',
+                                Duration(milliseconds: 2000),
+                                () => setState(() {}),
                               ),
-                            );
-                            return;
-                          }
-                          await beginPhoneAuth(
-                            context: context,
-                            phoneNumber: phoneNumberVal,
-                            onCodeSent: () async {
-                              context.goNamed('verify_otp');
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                hintText: FFLocalizations.of(context).getText(
+                                  'uyqassmk' /* Enter Phone Number */,
+                                ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                filled: true,
+                                fillColor: Color(0xFFC9B4B4),
+                              ),
+                              style: FlutterFlowTheme.of(context).bodyText1,
+                              textAlign: TextAlign.center,
+                              keyboardType: TextInputType.phone,
+                            ),
+                          ),
+                          FFButtonWidget(
+                            onPressed: () async {
+                              final phoneNumberVal = textController.text;
+                              if (phoneNumberVal.isEmpty ||
+                                  !phoneNumberVal.startsWith('+')) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                        'Phone Number is required and has to start with +.'),
+                                  ),
+                                );
+                                return;
+                              }
+                              await beginPhoneAuth(
+                                context: context,
+                                phoneNumber: phoneNumberVal,
+                                onCodeSent: () async {
+                                  context.goNamed('verify_otp');
+                                },
+                              );
                             },
-                          );
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          '62b9gh96' /* Send OTP */,
-                        ),
-                        options: FFButtonOptions(
-                          width: 130,
-                          height: 40,
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                          textStyle:
-                              FlutterFlowTheme.of(context).subtitle2.override(
+                            text: FFLocalizations.of(context).getText(
+                              '62b9gh96' /* Send OTP */,
+                            ),
+                            options: FFButtonOptions(
+                              width: 130,
+                              height: 40,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
                                     fontFamily: 'Poppins',
                                     color: Colors.white,
                                   ),
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: 12,
+                            ),
                           ),
-                          borderRadius: 12,
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),

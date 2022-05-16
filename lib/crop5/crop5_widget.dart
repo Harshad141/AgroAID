@@ -17,23 +17,6 @@ class _Crop5WidgetState extends State<Crop5Widget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
-        automaticallyImplyLeading: false,
-        title: Text(
-          FFLocalizations.of(context).getText(
-            'kqtw8sex' /* Page Title */,
-          ),
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
-                color: Colors.white,
-                fontSize: 22,
-              ),
-        ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
-      ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
@@ -42,7 +25,7 @@ class _Crop5WidgetState extends State<Crop5Widget> {
             width: 1000,
             height: 1000,
             decoration: BoxDecoration(
-              color: Color(0xFFEEEEEE),
+              color: Color(0x5E96ECEC),
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -51,247 +34,299 @@ class _Crop5WidgetState extends State<Crop5Widget> {
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '3qqw0ihe' /* Crop 5  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).subtitle1,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(100, 0, 0, 0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/739/600',
-                          width: 200,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'ohmegtq0' /* Introduction  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF0E0202),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(125, 0, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            '9soaim57' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            '3qqw0ihe' /*   MILLETES  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title1,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(60, 0, 0, 0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/agro-aid-d6wj8v/assets/amcd8rnvhurn/milletes.jpg',
+                            width: 250,
+                            height: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'ohmegtq0' /* Introduction  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF0E0202),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '9soaim57' /* Millet is a cereal grain that ... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF110202),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'fp85llfg' /* Climate  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF090101),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'qkgrhqa1' /* A warm, temperate climate is e... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF110202),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '2hune06t' /* Soil Type  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF1A0303),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'hd2gypil' /* Millet has wide adaptability t... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF120202),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '3vfm23n0' /* Fertilizer  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF230404),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'i70970ue' /* Application of 40 kg N + 20 kg... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF120202),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'uqh2kc6h' /* Weed Control  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF150202),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 20, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '2qynlzxu' /* Critical period for crop weed ... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF140303),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'n58yai7b' /* Irrigation  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF1B0303),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'gzwcz6u2' /* Pearl millet is mainly grown u... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF150303),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'w4zymafe' /* Harvesting  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF180404),
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(20, 5, 0, 5),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '0tok0wmy' /* Harvest the millet when the gr... */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Poppins',
                                     color: Color(0xFF110202),
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'fp85llfg' /* Climate  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF090101),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'qkgrhqa1' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF110202),
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '2hune06t' /* Soil type  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF1A0303),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'hd2gypil' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF120202),
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '3vfm23n0' /* Fertilizer  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF230404),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'i70970ue' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF120202),
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'uqh2kc6h' /* Weed control  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF150202),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            '2qynlzxu' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF140303),
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'n58yai7b' /* Irrigation  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF1B0303),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'gzwcz6u2' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF150303),
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'w4zymafe' /* Harvesting  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3.override(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF180404),
-                            ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            '0tok0wmy' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF110202),
+                                    fontWeight: FontWeight.normal,
                                   ),
                         ),
                       ),

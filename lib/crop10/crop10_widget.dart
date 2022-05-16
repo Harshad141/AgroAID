@@ -17,23 +17,6 @@ class _Crop10WidgetState extends State<Crop10Widget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
-        automaticallyImplyLeading: false,
-        title: Text(
-          FFLocalizations.of(context).getText(
-            '1fp2ve1i' /* Page Title */,
-          ),
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
-                color: Colors.white,
-                fontSize: 22,
-              ),
-        ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
-      ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
@@ -42,7 +25,7 @@ class _Crop10WidgetState extends State<Crop10Widget> {
             width: 1000,
             height: 1000,
             decoration: BoxDecoration(
-              color: Color(0xFFEEEEEE),
+              color: Color(0x5E96ECEC),
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -51,61 +34,14 @@ class _Crop10WidgetState extends State<Crop10Widget> {
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'cfh794q9' /* CROP10 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).subtitle1,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(100, 0, 0, 0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/559/600',
-                          width: 200,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'zms5znmu' /* Introduction  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(150, 0, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'g15vp6yq' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            'cfh794q9' /*  RICE  */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).title1,
                         ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'rlg90q3o' /* Climate  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3,
                       ),
                     ],
                   ),
@@ -113,24 +49,16 @@ class _Crop10WidgetState extends State<Crop10Widget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'flkwbzpe' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                        padding: EdgeInsetsDirectional.fromSTEB(60, 0, 0, 0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/agro-aid-d6wj8v/assets/kn1k5y1r9yvh/rice.jpg',
+                            width: 250,
+                            height: 150,
+                            fit: BoxFit.cover,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
                         ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'mo6fp348' /* Soil type */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title3,
                       ),
                     ],
                   ),
@@ -138,115 +66,246 @@ class _Crop10WidgetState extends State<Crop10Widget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'mc75uqa6' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            'zms5znmu' /* Introduction  */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).title3,
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'srzpv5te' /* Fertilizer  */,
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'g15vp6yq' /* Rice is the seed of the grass ... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
                         ),
-                        style: FlutterFlowTheme.of(context).title3,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'ecil57z6' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            'rlg90q3o' /* Climate  */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).title3,
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '3w3xszqx' /* Weed control  */,
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'flkwbzpe' /* Rice crop needs a hot and humi... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
                         ),
-                        style: FlutterFlowTheme.of(context).title3,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'n3sa7lvn' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            'mo6fp348' /* Soil Type */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).title3,
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'vncdobc9' /* Irrigation  */,
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'mc75uqa6' /* Clay or clay loams are most su... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
                         ),
-                        style: FlutterFlowTheme.of(context).title3,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            '29cwlx2b' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            'srzpv5te' /* Fertilizer  */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).title3,
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'jazs3efc' /* Harvesing  */,
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'ecil57z6' /* Chemical fertilizers are the m... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
                         ),
-                        style: FlutterFlowTheme.of(context).title3,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            '9pwwru3d' /* h njnobsuvyjidiiqpqowoeijrbrjn... */,
+                            '3w3xszqx' /* Weed Control  */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).title3,
                         ),
                       ),
                     ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'n3sa7lvn' /* In transplanted rice, hand wee... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'vncdobc9' /* Irrigation  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '29cwlx2b' /* Irrigation is an important sta... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'jazs3efc' /* Harvesing  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title3,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(15, 5, 0, 5),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '9pwwru3d' /* Rice is manually threshed, the... */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

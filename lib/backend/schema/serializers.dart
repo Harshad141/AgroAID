@@ -1,6 +1,10 @@
 import 'package:built_value/standard_json_plugin.dart';
 
 import 'agroaid_record.dart';
+import 'user_record.dart';
+import 'chats_record.dart';
+import 'chat_messages_record.dart';
+import 'report_record.dart';
 
 import 'index.dart';
 
@@ -12,6 +16,10 @@ const kDocumentReferenceField = 'Document__Reference__Field';
 
 @SerializersFor(const [
   AgroaidRecord,
+  UserRecord,
+  ChatsRecord,
+  ChatMessagesRecord,
+  ReportRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

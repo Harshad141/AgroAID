@@ -18,6 +18,38 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: Color(0xFF00FA10),
+        automaticallyImplyLeading: false,
+        leading: InkWell(
+          onTap: () async {
+            context.pushNamed('landing_page');
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+            size: 30,
+          ),
+        ),
+        title: Align(
+          alignment: AlignmentDirectional(0, 0.1),
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 25, 0),
+            child: Text(
+              FFLocalizations.of(context).getText(
+                '3bgncgrr' /* Soil Testing */,
+              ),
+              style: FlutterFlowTheme.of(context).title1.override(
+                    fontFamily: 'PT Serif',
+                    color: Colors.black,
+                  ),
+            ),
+          ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 2,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
@@ -49,7 +81,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.9,
-                      height: MediaQuery.of(context).size.height * 0.35,
+                      height: MediaQuery.of(context).size.height * 0.42,
                       decoration: BoxDecoration(
                         color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.circular(10),
@@ -200,7 +232,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        115, 0, 0, 0),
+                                        70, 0, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
@@ -209,10 +241,9 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                         'g24521ww' /* BUY NOW  */,
                                       ),
                                       options: FFButtonOptions(
-                                        width: 100,
+                                        width: 200,
                                         height: 40,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBtnText,
+                                        color: Color(0xFF82EC8B),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .subtitle2
                                             .override(
@@ -239,7 +270,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.9,
-                      height: MediaQuery.of(context).size.height * 0.35,
+                      height: MediaQuery.of(context).size.height * 0.8,
                       decoration: BoxDecoration(
                         color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.circular(20),
@@ -260,14 +291,14 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF41AD1D),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(0),
                                   ),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 10, 0, 0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'i1yu7jnm' /* Basic pacakge                 ... */,
+                                        'i1yu7jnm' /* Basic package                 ... */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .subtitle1,
@@ -516,7 +547,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      115, 0, 0, 0),
+                                      70, 0, 0, 0),
                                   child: FFButtonWidget(
                                     onPressed: () {
                                       print('Button pressed ...');
@@ -525,10 +556,9 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                       'cxctj9g5' /* BUY NOW  */,
                                     ),
                                     options: FFButtonOptions(
-                                      width: 100,
+                                      width: 200,
                                       height: 40,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBtnText,
+                                      color: Color(0xFF82EC8B),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .subtitle2
                                           .override(
@@ -554,7 +584,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.9,
-                      height: MediaQuery.of(context).size.height * 0.6,
+                      height: MediaQuery.of(context).size.height * 0.8,
                       decoration: BoxDecoration(
                         color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.circular(20),
@@ -572,7 +602,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width * 0.9,
-                                  height: 60,
+                                  height: 70,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF41AD1D),
                                     borderRadius: BorderRadius.circular(20),
@@ -582,7 +612,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                         0, 10, 0, 0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'odqaj3q8' /* Standered  pacakage           ... */,
+                                        'odqaj3q8' /* Standered  package            ... */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .subtitle1,
@@ -847,7 +877,7 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      115, 0, 0, 0),
+                                      70, 0, 0, 0),
                                   child: FFButtonWidget(
                                     onPressed: () {
                                       print('Button pressed ...');
@@ -856,10 +886,9 @@ class _SoiltestingWidgetState extends State<SoiltestingWidget> {
                                       'gq5trm7h' /* BUY NOW  */,
                                     ),
                                     options: FFButtonOptions(
-                                      width: 100,
+                                      width: 200,
                                       height: 40,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBtnText,
+                                      color: Color(0xFF82EC8B),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .subtitle2
                                           .override(

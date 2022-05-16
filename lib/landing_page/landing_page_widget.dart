@@ -22,6 +22,15 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFF61AA79),
         automaticallyImplyLeading: true,
+        title: Text(
+          FFLocalizations.of(context).getText(
+            '3i0fpq1d' /* AgroAid */,
+          ),
+          style: FlutterFlowTheme.of(context).bodyText1.override(
+                fontFamily: 'Poppins',
+                fontSize: 25,
+              ),
+        ),
         actions: [],
         centerTitle: true,
         elevation: 4,
@@ -32,11 +41,217 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Expanded(
-              child: ListView(
-                padding: EdgeInsets.zero,
-                scrollDirection: Axis.vertical,
-                children: [],
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 150, 10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  'assets/images/home_image.webp',
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+              child: InkWell(
+                onTap: () async {
+                  context.goNamed('CROPINFO');
+                },
+                child: ListTile(
+                  leading: Icon(
+                    Icons.info_sharp,
+                    color: Color(0xFF050505),
+                  ),
+                  title: Text(
+                    FFLocalizations.of(context).getText(
+                      'outg841c' /* Crop Information  */,
+                    ),
+                    style: FlutterFlowTheme.of(context).title3.override(
+                          fontFamily: 'Poppins',
+                          color: Color(0xFF020202),
+                        ),
+                  ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Color(0xFF303030),
+                    size: 20,
+                  ),
+                  tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                  dense: false,
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                context.pushNamed('myfriends');
+              },
+              child: ListTile(
+                leading: Icon(
+                  Icons.textsms,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    'pbz0uccf' /* Chat */,
+                  ),
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                      ),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black,
+                  size: 20,
+                ),
+                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                dense: false,
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                context.pushNamed('News');
+              },
+              child: ListTile(
+                leading: Icon(
+                  Icons.library_books_sharp,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    'ootygo7c' /* News */,
+                  ),
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                      ),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Color(0xFF303030),
+                  size: 20,
+                ),
+                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                dense: false,
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                context.pushNamed('search_vendors');
+              },
+              child: ListTile(
+                leading: Icon(
+                  Icons.commute_rounded,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    '24ev3qxl' /* Vendors */,
+                  ),
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                      ),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black,
+                  size: 20,
+                ),
+                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                dense: false,
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                context.pushNamed('ecomm_home');
+              },
+              child: ListTile(
+                leading: Icon(
+                  Icons.shopping_cart_sharp,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    'j1oeue4b' /* Products */,
+                  ),
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                      ),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Color(0xFF303030),
+                  size: 20,
+                ),
+                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                dense: false,
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                context.pushNamed('hire_machineries');
+              },
+              child: ListTile(
+                leading: Icon(
+                  Icons.agriculture,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    '6obefen0' /* Hire Machinery */,
+                  ),
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                      ),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Color(0xFF303030),
+                  size: 20,
+                ),
+                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                dense: false,
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                context.pushNamed('faqs');
+              },
+              child: ListTile(
+                leading: Icon(
+                  Icons.contact_support,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    'kbplx8z7' /* FAQs  */,
+                  ),
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                      ),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Color(0xFF303030),
+                  size: 20,
+                ),
+                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                dense: false,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
+              child: Image.asset(
+                'assets/images/agroaid_logo.png',
+                width: 500,
+                height: 100,
+                fit: BoxFit.cover,
               ),
             ),
           ],
@@ -78,7 +293,7 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Row(
@@ -132,18 +347,28 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         65, 0, 0, 0),
-                                    child: Icon(
-                                      Icons.chat,
-                                      color: Colors.black,
-                                      size: 24,
+                                    child: InkWell(
+                                      onTap: () async {
+                                        context.pushNamed('myfriends');
+                                      },
+                                      child: Icon(
+                                        Icons.chat,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
                                   ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'i0m11pq4' /* Chat */,
+                                  InkWell(
+                                    onTap: () async {
+                                      context.pushNamed('myfriends');
+                                    },
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'i0m11pq4' /* Chat */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1,
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText1,
                                   ),
                                 ],
                               ),
@@ -177,57 +402,71 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                       ).image,
                                     ),
                                   ),
-                                  child: Icon(
-                                    Icons.add_circle_outline_rounded,
-                                    color: Colors.black,
-                                    size: 30,
+                                  child: InkWell(
+                                    onTap: () async {
+                                      context.pop();
+                                    },
+                                    child: Icon(
+                                      Icons.add_circle_outline_rounded,
+                                      color: Colors.black,
+                                      size: 30,
+                                    ),
                                   ),
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 0, 0, 5),
-                                  child: Material(
-                                    color: Colors.transparent,
-                                    elevation: 1,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Container(
-                                      width: 200,
-                                      height: 100,
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFACECE5),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Color(0xFFEF5350),
-                                          )
-                                        ],
+                                  child: InkWell(
+                                    onTap: () async {
+                                      context.pushNamed('Soiltesting');
+                                    },
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      elevation: 1,
+                                      shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                          color: Color(0xFF00E73E),
-                                          width: 2,
-                                        ),
                                       ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5, 5, 100, 10),
-                                            child: Image.asset(
-                                              'assets/images/soil.jpg',
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  2,
-                                              height: 100,
-                                              fit: BoxFit.contain,
-                                            ),
+                                      child: Container(
+                                        width: 200,
+                                        height: 100,
+                                        decoration: BoxDecoration(
+                                          color: Color(0xFFACECE5),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Color(0xFFEF5350),
+                                            )
+                                          ],
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          border: Border.all(
+                                            color: Color(0xFF00E73E),
+                                            width: 2,
                                           ),
-                                        ],
+                                        ),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/soil.jpg',
+                                              width: 100,
+                                              height: 100,
+                                              fit: BoxFit.cover,
+                                            ),
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '1ehpij38' /* Get Your 
+soil Tested 
+now!! */
+                                                ,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1,
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -250,7 +489,7 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 10, 10, 10),
+                                      10, 10, 0, 10),
                                   child: Image.asset(
                                     'assets/images/login_page_img.webp',
                                     width: 100,
@@ -263,33 +502,26 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Icon(
-                                        Icons.call,
-                                        color: Colors.black,
-                                        size: 50,
-                                      ),
-                                    ),
                                     FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
+                                      onPressed: () async {
+                                        context.pushNamed('faqs');
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'rqoy5rpg' /* Talk with agro 
-experts direct... */
-                                        ,
+                                        'rqoy5rpg' /* Talk with agro experts        ... */,
+                                      ),
+                                      icon: Icon(
+                                        Icons.call,
+                                        size: 15,
                                       ),
                                       options: FFButtonOptions(
-                                        width: 130,
+                                        width: 330,
                                         height: double.infinity,
                                         color: Color(0x00FFFFFF),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodyText1
                                             .override(
                                               fontFamily: 'Poppins',
-                                              fontSize: 10,
+                                              fontSize: 15,
                                             ),
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
@@ -349,6 +581,8 @@ experts direct... */
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -388,6 +622,8 @@ experts direct... */
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -403,23 +639,26 @@ experts direct... */
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            3, 5, 0, 0),
-                                        child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'wyl8hljp' /* The government has revised
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  3, 5, 0, 0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'wyl8hljp' /* The government has revised
  do... */
-                                            ,
+                                              ,
+                                            ),
+                                            maxLines: 3,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                          maxLines: 3,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Poppins',
-                                                fontSize: 11,
-                                                fontWeight: FontWeight.normal,
-                                              ),
                                         ),
                                       ),
                                     ],
@@ -427,44 +666,66 @@ experts direct... */
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 3, 0, 0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  9, 0, 0, 0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            child: Image.network(
-                                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/agro-aid-d6wj8v/assets/u38cz102e3mb/3.jpg',
-                                              width: 150,
-                                              height: 100,
-                                              fit: BoxFit.cover,
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    9, 0, 0, 0),
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                              child: Image.network(
+                                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/agro-aid-d6wj8v/assets/u38cz102e3mb/3.jpg',
+                                                width: 150,
+                                                height: 100,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  3, 0, 0, 0),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'jmxxyn63' /* Sugar production in India has ... */,
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    3, 0, 0, 0),
+                                            child: Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'jmxxyn63' /* Sugar production in India has ... */,
+                                              ),
+                                              maxLines: 3,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                        fontSize: 11,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
                                             ),
-                                            maxLines: 3,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () async {
+                                      context.pushNamed('News');
+                                    },
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'swq0beck' /* View all */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: Color(0xFF0016FF),
+                                          ),
                                     ),
                                   ),
                                 ],

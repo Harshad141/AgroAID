@@ -35,6 +35,28 @@ abstract class AgroaidRecord
   String get state;
 
   @nullable
+  String get email;
+
+  @nullable
+  @BuiltValueField(wireName: 'display_name')
+  String get displayName;
+
+  @nullable
+  @BuiltValueField(wireName: 'photo_url')
+  String get photoUrl;
+
+  @nullable
+  String get uid;
+
+  @nullable
+  @BuiltValueField(wireName: 'created_time')
+  DateTime get createdTime;
+
+  @nullable
+  @BuiltValueField(wireName: 'phone_number')
+  String get phoneNumber;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -44,7 +66,12 @@ abstract class AgroaidRecord
     ..address = ListBuilder()
     ..pincode = ListBuilder()
     ..aadharNumber = ListBuilder()
-    ..state = '';
+    ..state = ''
+    ..email = ''
+    ..displayName = ''
+    ..photoUrl = ''
+    ..uid = ''
+    ..phoneNumber = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('agroaid');
@@ -70,6 +97,12 @@ abstract class AgroaidRecord
 Map<String, dynamic> createAgroaidRecordData({
   String district,
   String state,
+  String email,
+  String displayName,
+  String photoUrl,
+  String uid,
+  DateTime createdTime,
+  String phoneNumber,
 }) =>
     serializers.toFirestore(
         AgroaidRecord.serializer,
@@ -79,4 +112,10 @@ Map<String, dynamic> createAgroaidRecordData({
           ..address = null
           ..pincode = null
           ..aadharNumber = null
-          ..state = state));
+          ..state = state
+          ..email = email
+          ..displayName = displayName
+          ..photoUrl = photoUrl
+          ..uid = uid
+          ..createdTime = createdTime
+          ..phoneNumber = phoneNumber));
