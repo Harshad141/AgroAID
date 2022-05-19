@@ -155,7 +155,7 @@ class _VerifyOtpWidgetState extends State<VerifyOtpWidget> {
                                     return;
                                   }
 
-                                  context.pushNamed('landing_page');
+                                  context.pushNamed('new_reg_details');
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   '0x79bp2j' /* Verify

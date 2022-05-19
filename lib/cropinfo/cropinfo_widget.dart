@@ -29,39 +29,95 @@ class _CropinfoWidgetState extends State<CropinfoWidget> {
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       drawer: Drawer(
         elevation: 16,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 150, 10),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.asset(
-                  'assets/images/home_image.webp',
-                  width: MediaQuery.of(context).size.width * 0.3,
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  fit: BoxFit.cover,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 150, 10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
+                  child: Image.asset(
+                    'assets/images/home_image.webp',
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    height: MediaQuery.of(context).size.height * 0.15,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-              child: InkWell(
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                child: InkWell(
+                  onTap: () async {
+                    context.goNamed('CROPINFO');
+                  },
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.info_sharp,
+                      color: Color(0xFF050505),
+                    ),
+                    title: Text(
+                      FFLocalizations.of(context).getText(
+                        'xg85vcay' /* Crop Information  */,
+                      ),
+                      style: FlutterFlowTheme.of(context).title3.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF020202),
+                          ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF303030),
+                      size: 20,
+                    ),
+                    tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                    dense: false,
+                  ),
+                ),
+              ),
+              InkWell(
                 onTap: () async {
-                  context.goNamed('CROPINFO');
+                  context.pushNamed('Login');
                 },
                 child: ListTile(
                   leading: Icon(
-                    Icons.info_sharp,
-                    color: Color(0xFF050505),
+                    Icons.textsms,
+                    color: Colors.black,
                   ),
                   title: Text(
                     FFLocalizations.of(context).getText(
-                      'xg85vcay' /* Crop Information  */,
+                      'u2j7hqix' /* Chat */,
                     ),
                     style: FlutterFlowTheme.of(context).title3.override(
                           fontFamily: 'Poppins',
-                          color: Color(0xFF020202),
+                          color: Colors.black,
+                        ),
+                  ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.black,
+                    size: 20,
+                  ),
+                  tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                  dense: false,
+                ),
+              ),
+              InkWell(
+                onTap: () async {
+                  context.pushNamed('News');
+                },
+                child: ListTile(
+                  leading: Icon(
+                    Icons.library_books_sharp,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    FFLocalizations.of(context).getText(
+                      '85r95slh' /* News */,
+                    ),
+                    style: FlutterFlowTheme.of(context).title3.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
                         ),
                   ),
                   trailing: Icon(
@@ -73,179 +129,98 @@ class _CropinfoWidgetState extends State<CropinfoWidget> {
                   dense: false,
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () async {
-                context.pushNamed('myfriends');
-              },
-              child: ListTile(
-                leading: Icon(
-                  Icons.textsms,
-                  color: Colors.black,
-                ),
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    'u2j7hqix' /* Chat */,
+              InkWell(
+                onTap: () async {
+                  context.pushNamed('search_vendors');
+                },
+                child: ListTile(
+                  leading: Icon(
+                    Icons.commute_rounded,
+                    color: Colors.black,
                   ),
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.black,
-                      ),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.black,
-                  size: 20,
-                ),
-                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
-                dense: false,
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                context.pushNamed('News');
-              },
-              child: ListTile(
-                leading: Icon(
-                  Icons.library_books_sharp,
-                  color: Colors.black,
-                ),
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    '85r95slh' /* News */,
+                  title: Text(
+                    FFLocalizations.of(context).getText(
+                      's16qinor' /* Vendors */,
+                    ),
+                    style: FlutterFlowTheme.of(context).title3.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
                   ),
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.black,
-                      ),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Color(0xFF303030),
-                  size: 20,
-                ),
-                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
-                dense: false,
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                context.pushNamed('search_vendors');
-              },
-              child: ListTile(
-                leading: Icon(
-                  Icons.commute_rounded,
-                  color: Colors.black,
-                ),
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    's16qinor' /* Vendors */,
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.black,
+                    size: 20,
                   ),
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.black,
-                      ),
+                  tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                  dense: false,
                 ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.black,
-                  size: 20,
-                ),
-                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
-                dense: false,
               ),
-            ),
-            InkWell(
-              onTap: () async {
-                context.pushNamed('myfriends');
-              },
-              child: ListTile(
-                leading: Icon(
-                  Icons.share_sharp,
-                  color: Colors.black,
-                ),
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    'ii5hua5z' /* Share */,
+              InkWell(
+                onTap: () async {
+                  context.pushNamed('hire_machineries');
+                },
+                child: ListTile(
+                  leading: Icon(
+                    Icons.agriculture,
+                    color: Colors.black,
                   ),
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.black,
-                      ),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Color(0xFF303030),
-                  size: 20,
-                ),
-                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
-                dense: false,
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                context.pushNamed('hire_machineries');
-              },
-              child: ListTile(
-                leading: Icon(
-                  Icons.agriculture,
-                  color: Colors.black,
-                ),
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    'e9eu6dzg' /* Hire Machinery */,
+                  title: Text(
+                    FFLocalizations.of(context).getText(
+                      'e9eu6dzg' /* Hire Machinery */,
+                    ),
+                    style: FlutterFlowTheme.of(context).title3.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
                   ),
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.black,
-                      ),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Color(0xFF303030),
-                  size: 20,
-                ),
-                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
-                dense: false,
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                context.pushNamed('faqs');
-              },
-              child: ListTile(
-                leading: Icon(
-                  Icons.contact_support,
-                  color: Colors.black,
-                ),
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    '1hizsvwt' /* FAQs  */,
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Color(0xFF303030),
+                    size: 20,
                   ),
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.black,
-                      ),
+                  tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                  dense: false,
                 ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Color(0xFF303030),
-                  size: 20,
+              ),
+              InkWell(
+                onTap: () async {
+                  context.pushNamed('faqs');
+                },
+                child: ListTile(
+                  leading: Icon(
+                    Icons.contact_support,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    FFLocalizations.of(context).getText(
+                      '1hizsvwt' /* FAQs  */,
+                    ),
+                    style: FlutterFlowTheme.of(context).title3.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
+                  ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Color(0xFF303030),
+                    size: 20,
+                  ),
+                  tileColor: FlutterFlowTheme.of(context).primaryBtnText,
+                  dense: false,
                 ),
-                tileColor: FlutterFlowTheme.of(context).primaryBtnText,
-                dense: false,
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 90, 0, 0),
-              child: Image.asset(
-                'assets/images/agroaid_logo.png',
-                width: 500,
-                height: 100,
-                fit: BoxFit.cover,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 90, 0, 0),
+                child: Image.asset(
+                  'assets/images/agroaid_logo.png',
+                  width: 500,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: SafeArea(

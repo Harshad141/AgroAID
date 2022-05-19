@@ -85,7 +85,7 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
             ),
             InkWell(
               onTap: () async {
-                context.pushNamed('myfriends');
+                context.pushNamed('Login');
               },
               child: ListTile(
                 leading: Icon(
@@ -349,7 +349,7 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                         65, 0, 0, 0),
                                     child: InkWell(
                                       onTap: () async {
-                                        context.pushNamed('myfriends');
+                                        context.pushNamed('Login');
                                       },
                                       child: Icon(
                                         Icons.chat,
@@ -360,7 +360,7 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                   ),
                                   InkWell(
                                     onTap: () async {
-                                      context.pushNamed('myfriends');
+                                      context.pushNamed('Login');
                                     },
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -404,7 +404,7 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                   ),
                                   child: InkWell(
                                     onTap: () async {
-                                      context.pop();
+                                      context.pushNamed('add_crop1');
                                     },
                                     child: Icon(
                                       Icons.add_circle_outline_rounded,

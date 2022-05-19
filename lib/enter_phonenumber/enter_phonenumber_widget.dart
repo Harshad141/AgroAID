@@ -20,10 +20,7 @@ class _EnterPhonenumberWidgetState extends State<EnterPhonenumberWidget> {
   @override
   void initState() {
     super.initState();
-    textController = TextEditingController(
-        text: FFLocalizations.of(context).getText(
-      'ogog7m3l' /* +91 - */,
-    ));
+    textController = TextEditingController();
   }
 
   @override
@@ -94,7 +91,7 @@ class _EnterPhonenumberWidgetState extends State<EnterPhonenumberWidget> {
                               controller: textController,
                               onChanged: (_) => EasyDebounce.debounce(
                                 'textController',
-                                Duration(milliseconds: 2000),
+                                Duration(milliseconds: 1000),
                                 () => setState(() {}),
                               ),
                               autofocus: true,

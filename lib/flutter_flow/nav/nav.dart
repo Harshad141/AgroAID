@@ -61,14 +61,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) => appStateNotifier.loggedIn
           ? LandingPageWidget()
-          : EnterPhonenumberWidget(),
+          : EnterLanguageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? LandingPageWidget()
-              : EnterPhonenumberWidget(),
+              : EnterLanguageWidget(),
         ),
         FFRoute(
           name: 'enter_language',
@@ -238,6 +238,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             userDisplay: params.getParam(
                 'userDisplay', ParamType.DocumentReference, 'user'),
           ),
+        ),
+        FFRoute(
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => LoginWidget(),
+        ),
+        FFRoute(
+          name: 'Register',
+          path: '/register',
+          builder: (context, params) => RegisterWidget(),
+        ),
+        FFRoute(
+          name: 'completeProfile',
+          path: '/completeProfile',
+          builder: (context, params) => CompleteProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -344,7 +359,7 @@ class FFRoute {
                   ),
                 )
               : requireAuth && !appStateNotifier.loggedIn
-                  ? EnterPhonenumberWidget()
+                  ? EnterLanguageWidget()
                   : page;
 
           final transitionInfo = state.transitionInfo;

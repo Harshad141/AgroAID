@@ -32,3 +32,7 @@ export 'hire_machineries/hire_machineries_widget.dart'
     show HireMachineriesWidget;
 export 'my_profile/my_profile_widget.dart' show MyProfileWidget;
 export 'edit_profile/edit_profile_widget.dart' show EditProfileWidget;
+export 'login/login_widget.dart' show LoginWidget;
+export 'register/register_widget.dart' show RegisterWidget;
+export 'complete_profile/complete_profile_widget.dart'
+    show CompleteProfileWidget;
